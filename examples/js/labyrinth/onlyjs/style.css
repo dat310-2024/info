@@ -1,0 +1,77 @@
+* {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+main > div {
+    flex-grow: 1;
+}
+#board {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    border: 1px solid black;
+}
+.field {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field.hidden {
+    background-color: burlywood;
+}
+.wall {
+    background-color: grey;
+}
+.pit {
+    background-color: black;
+}
+.exit {
+    background-color: yellow;
+}
+.field img {
+    display: none;
+}
+.field img.monster {
+    height: 48px;
+    display: none;
+}
+.field.hero img.hero {
+    display: block;
+}
+.field.monster img.monster {
+    display: block;
+}
+
+#stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#herostats.turn {
+    background-color: lightcyan;
+}
+
+#monsterstats.turn {
+    background-color: lightcoral;
+}
+
+#stats > div {
+    min-width: 300px;
+}
+
+#winner .hero {
+    display: none;
+}
+#winner .monster {
+    display: none;
+}

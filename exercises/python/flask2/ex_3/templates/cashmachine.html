@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cash machine</title>
+    <style>
+        .bill {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            padding: 0.1em;
+        }
+        li {
+            margin-bottom: 0.4em;
+        }
+    </style>
+</head>
+<body>
+
+    {# Show the ul below only if amount is defined #}
+    Paying 432 with the least number of coins/bills:
+    <ul>
+        {# use for loop to display the correct list for used #}
+        <li>4 x <span class="bill">100</span> </li>
+        <li>1 x <span class="bill">20</span> </li>
+        <li>1 x <span class="bill">10</span> </li>
+        <li>2 x <span class="bill">1</span> </li>
+    </ul>
+    <a href="/">Pay again</a>
+    
+    {# Show the form below if amount is not defined #}
+    <form action="/pay">
+        Amount to pay: <input type="number" name="amount" size="5" style="width: 5em">
+
+        <input type="submit" value="Pay">
+    </form>
+
+
+</body>
+</html>

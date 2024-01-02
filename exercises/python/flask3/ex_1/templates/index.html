@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #1: Add JSON file</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<form action="/addsong" method="post">
+    <input type="text" id="songTextInput" name="song" size="40" placeholder="Song name">
+    <input type="text" id="bandTextInput" name="band" size="40" placeholder="Band name">
+    <input type="submit" id="addButton" value="Add Song">
+</form>
+
+<ul id="playlist">
+    {% for song in playlist %}
+    <li>
+        <form action="/delete" method="post" class="delete">
+            <input type="number"  hidden name="songindex" value="{{ loop.index0}}">
+            <input type="submit" value="Delete">
+        </form>
+        <span class="inlist">{{ song.name }}</span>
+        <span class="inlist band">{{ song.band }}</span>
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
+

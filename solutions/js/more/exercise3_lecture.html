@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #3: Simple playlist from Lecture</title>
+    <link rel="stylesheet" href="exercise3.css">
+    <script>
+        /* In this solution, javascript is used as source of truth. */
+        let playlist = [];
+
+        class Song {
+            constructor(name){
+                this.name = name;
+            }
+            delete(){
+                let i = playlist.indexOf(this);
+                playlist.splice(i,1);
+                showPlaylist();
+            }
+        }
+
+        function addSong(){
+            let name = document.getElementById("songTextInput").value;
+            document.getElementById("songTextInput").value = "";
+
+            playlist.push(new Song(name));
+
+            showPlaylist();
+        }
+        /*function remove(name){
+            let index = 0;
+            for (let i = 0 ; i < playlist.length; i++){
+                if (playlist[index] == name){
+                    index = i;
+                    break;
+                }
+            }
+            
+            function isright(element){
+                return element == name;
+            }
+            let index2 = playlist.findIndex(isright);
+            //let index2 = playlist.findIndex((element)=>(element == name));
+            playlist.splice(index,1);
+            showPlaylist();
+        }*/
+
+        function showPlaylist(){
+            let playlistUl = document.getElementById("playlist");
+            playlistUl.innerHTML = "";
+            for (let song of playlist){
+                let li = createListElement(song);
+                playlistUl.appendChild(li);
+            }
+        }
+
+        function createListElement(song){
+            let li =document.createElement("li");
+            li.textContent = song.name;
+            let img = document.createElement("img")
+            img.src = "images/delete.png";
+            img.onclick =  function(){ song.delete(); };
+            li.appendChild(img);
+            return li;
+        }
+        
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input type="button" id="addButton" value="Add Song" onclick="addSong();">
+</form>
+
+<ul id="playlist">
+    <!-- <li>Example <img src="images/delete.png"></li> -->
+</ul>
+
+</body>
+</html>
+

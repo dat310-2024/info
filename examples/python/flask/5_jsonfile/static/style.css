@@ -1,0 +1,16 @@
+* {
+    font-family: Verdana, Arial, sans-serif;;
+}
+
+label {
+
+    width: 110px;
+    display: inline-block;
+
+}
+
+.error {
+    border: 1px solid red;
+    background-color: lightpink;
+    color: white
+}

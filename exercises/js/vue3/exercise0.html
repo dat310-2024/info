@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Vue -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        ul#playlist {
+            border: 1px solid #a9a9a9;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 0px;
+            list-style-type: none;
+        }
+        
+        ul#playlist li {
+            border-bottom: 1px solid #a9a9a9;
+            
+            background-image: linear-gradient(#f9f9f9, #e3e3e3);
+        }
+        
+        ul#playlist li:last-child {
+            border-bottom: none;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        ul#playlist li:first-child {
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        
+        /* added for 7b */
+        ul#playlist li {
+            position: relative;
+        }
+        img.icon {
+            float: right;
+            width: 32px;
+        }
+        
+        .inlist {
+            display: inline-block;
+            width: 200px;
+            overflow: hidden;
+            padding: 10px;
+        }
+        
+        .band {
+            font-weight: bold;
+        }
+    </style>
+
+
+    <title>Vue list</title>
+</head>
+<body>
+<div id="app">
+    <playlist-form v-on:add-song="addSong"></playlist-form>
+
+    <ul id="playlist">
+        <playlist-item v-for="(song, index) in playlist"
+            v-bind:song="song">
+        </playlist-item>
+    </ul>
+</div>
+<script>
+    class Song{
+        constructor(name, band){
+            this.name = name;
+            this.band = band;
+       }
+    }
+
+    let playListItemC = {
+        props: ['song'],
+        template: /*html*/`
+            <li>
+                <img src="images/delete.png" alt="delete" class="icon" v-on:click="remove">
+                <img src="images/play.png" alt="play" class="icon" v-on:click="play()">
+                <span class="inlist">{{ song.name }}</span>
+                <span class="inlist band">{{ song.band }}</span>
+                <span class="inlist">played {{ played }} times</span>
+            </li>
+        `,
+        data: function(){
+            return {
+                played: 0
+            }
+        },
+        methods: {
+            play: function(){
+                this.played++;
+            },
+            remove: function(){
+                //emit an event
+            }
+        }
+    
+    }
+    
+    let playlistFormC = {
+        template: /*html*/ `
+        <form>
+            <input type="text" id="songTextInput" size="40" placeholder="Song name" v-model="newSongName">
+            <input type="text" id="bandTextInput" size="40" placeholder="Band name" v-model="newBandName">
+            <input type="button" id="addButton" value="Add Song" v-on:click="addSong">
+        </form>`,
+        data: function(){
+            return {
+                newSongName: "",
+                newBandName: ""
+            }
+        },
+        methods: {
+            addSong: function(){
+                let newSong = new Song(this.newSongName, this.newBandName);
+                this.$emit('add-song', newSong);
+            }
+        }
+    }
+
+    let app = Vue.createApp({
+        data(){ 
+            return {
+                playlist: [
+                    new Song("My favorite", "This band"),
+                    new Song("Second favorite", "Other band")
+                ]               
+            }
+        },
+        methods: {
+            remove: function(index){
+                if (index > -1) {
+                    this.playlist.splice(index, 1);
+                  }
+            },
+            addSong: function(song){
+                this.playlist.push(song)
+            }
+        }
+    });
+    app.component('playlist-item',playListItemC);
+    app.component('playlist-form',playlistFormC);
+    app.mount("#app");
+</script>
+</body>
+</html>

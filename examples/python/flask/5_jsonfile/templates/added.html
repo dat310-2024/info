@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form handling in flask</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    {% if error is defined %}
+    <p class="error">
+        {{ error }}
+    </p>
+    {% else %}
+    <p>
+        Added {{city}} with postcode {{ postcode }}
+    </p>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>

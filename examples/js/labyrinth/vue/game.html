@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.js"></script>
+    <script src="game_jsonly.js"></script>
+    <script src="board_jsonly.js"></script>
+    <title>Game</title>
+</head>
+<body>
+    <h1>The labyrinth game</h1>
+    <div id="app">
+    <main v-on:keyup="handle" tabindex="0">
+        <div>
+        <div id="board">
+            <div class="field" v-for="field in board.fields" 
+                v-bind:class="[field.type,{ hidden: field.hidden }, { hero: field.hero }, { monster: field.monster }]">
+                <img class="hero" src="hero.jpg" alt="hero">
+                <img class="monster" src="monster.png" alt="monster">
+            </div>
+        </div>
+    </div>
+    <div id="stats">
+        <div id="herostats" v-bind:class="{turn: isheroturn}">
+            <h2>Hero</h2>
+            <div>Moves: <span class="movescount">{{ game.heromoves }}</span> </div>
+        </div>
+        <div id="monsterstats" v-bind:class="{turn: !isheroturn}">
+            <h2>Monster</h2>
+            <div>Moves: <span class="movescount">{{ game.monstermoves }}</span> </div>
+        </div>
+    </div>
+    </main>
+    <div id="winner">
+        <h2 v-show="game.ended">The {{ game.winner }} won!</h2>
+    </div>
+    </div>
+    <script>
+        //let board = Vue.reactive(new Board());
+        //board.start();
+        //document.body.addEventListener("keyup", keyhandle);
+
+        let app = Vue.createApp({
+            data: function(){
+                return {
+                    board: new Board()
+                }
+            },
+            methods:{
+                handle: function(event){
+                    switch (event.keyCode) {
+                        case 37: // left
+                            this.board.moveleft('hero');
+                            break;
+                        case 38: // up
+                            this.board.moveup('hero');
+                            break;
+                        case 39: // right
+                            this.board.moveright('hero');
+                            break;
+                        case 40: // down
+                            this.board.movedown('hero');
+                            break;
+                        case 65: // left
+                            this.board.moveleft('monster');
+                            break;
+                        case 87: // up
+                            this.board.moveup('monster');
+                            break;
+                        case 68: // right
+                            this.board.moveright('monster');
+                            break;
+                        case 83: // down
+                            this.board.movedown('monster');
+                            break;
+                        default: // any other key
+                            // do nothing
+                            console.log(event.keyCode);
+                            break;
+                    }
+                }
+            },
+            computed: {
+                game: function(){return this.board.game },
+                isheroturn: function(){
+                    return (this.game.player()== 'hero');
+                },
+                isherowinner: function(){
+                    return (this.game.winner == 'hero');
+                },
+                ismonsterwinner: function(){
+                    return (this.game.winner == 'monster');
+                }
+            }
+        })
+        let vm = app.mount("#app");
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form handling in flask</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    {% if city is defined %}
+    <p>
+        {{postcode}} :&nbsp;{{city}} 
+    </p>
+    {% else %}
+    <p>
+        No entry found for code {{ postcode }}
+    </p>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>
