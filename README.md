@@ -1,10 +1,11 @@
   # UiS DAT310 Web Programming course
 hallo hallo
-This repository is for the 2032 spring edition of the DAT310 Web programming course at the University of Stavanger. 
+This repository is for the 2024 spring edition of the DAT310 Web programming course at the University of Stavanger. 
 
   - **Intro**: 
   - [Exam project](exam/examproject.md)
   - Introduction [slides](slides/WebProgramming-Course_info.pdf)
+  - Introduction [video](https://youtu.be/Vnt1MH8uEc4)
   - [how to hand in assignments on GitHub](quickfeed.md)
   - [git slides](slides/0-Web-programming-Git.pdf)
   - [Quickfeed](https://uis.itest.run)
