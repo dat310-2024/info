@@ -33,7 +33,7 @@ This is a tentative schedule and will be subject to changes.
 
 | Week | Lecture | Topic                 | Resources                                                                                                                                                                                                                                                                                      |
 |-----:|--------:|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    1 |       Thu | HTML                  | [Slides](slides/1-1-Web-programming-HTML.pdf) [examples](examples/html/basic/) [exercises](exercises/html/basic/) [solutions](solutions/html/basic/) |
+|    1 |       Thu | HTML                  | [Slides](slides/1-1-Web-programming-HTML.pdf)(**2024**) [examples](examples/html/basic/) [exercises](exercises/html/basic/) [solutions](solutions/html/basic/) |
 |    2 |       Tue | CSS I (properties)    | [Slides](slides/2-1-Web-programming-CSS-p1.pdf) [examples](examples/css/properties) [exercises](exercises/css/properties) [solutions](solutions/css/properties) |
 |    2 |       Thu | CSS II (selectors)    | [Slides](slides/2-2-Web-programming-CSS-p2.pdf) [examples](examples/css/selectors)  [exercises](exercises/css/properties)  [solutions](solutions/css/selectors) |
 |    3 |       Tue | CSS III (positioning) | [Slides](slides/3-1-Web-programming-CSS-p3.pdf) [examples](examples/css/positioning/)  [exercises](exercises/css/positioning/)  [solutions](solutions/css/positioning/) |
