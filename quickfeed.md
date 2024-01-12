@@ -56,7 +56,7 @@ Follow the steps below to register and sign up for the course on Quickfeed.
    An invitation will be sent to the email address associated with your GitHub account.
    Accept the invitation using the received email.
    Note that emails from GitHub can sometimes take a while to arrive.
-   You can avoid this delay by navigating to the [assignments](https://github.com/dat320-2023/assignments)
+   You can avoid this delay by navigating to the [assignments](https://github.com/dat320-2024/assignments)
    repository and accept the invitation.
 
 5. Once you have accepted the invitation, you will get your own repository under the course organization on GitHub.
@@ -66,7 +66,7 @@ Follow the steps below to register and sign up for the course on Quickfeed.
 This section give step-by-step instructions on how to submit assignments.
 
 1. Initially, you will get access to two repositories when you have signed up on Quickfeed.
-   The first is the [`assignments`](https://github.com/dat310-2023/assignments)
+   The first is the [`assignments`](https://github.com/dat310-2024/assignments)
    repository, which is where we publish all lab assignments, skeleton code
    and additional information.
    You only have read access to this repository, and its content may change
@@ -82,9 +82,9 @@ This section give step-by-step instructions on how to submit assignments.
    ```console
    mkdir $HOME/dat310
    cd $HOME/dat310
-   git clone https://github.com/dat310-2023/username-labs assignments
+   git clone https://github.com/dat310-2024/username-labs assignments
    cd assignments
-   git remote add course-assignments https://github.com/dat310-2023/assignments
+   git remote add course-assignments https://github.com/dat310-2024/assignments
    git pull course-assignments main
    ```
 
@@ -94,7 +94,7 @@ This section give step-by-step instructions on how to submit assignments.
    ```console
    mkdir $HOME/dat310
    cd $HOME/dat310
-   git clone git@github.com:dat310-2023/username-labs.git assignments
+   git clone git@github.com:dat310-2024/username-labs.git assignments
    cd assignments
    git remote add course-assignments 
    git pull course-assignments main
@@ -149,7 +149,7 @@ This section give step-by-step instructions on how to submit assignments.
    another group member has previously pushed it to GitHub.
 
 8. As time goes by the teaching staff may publish updates to the
-   original [`assignments`](https://github.com/dat310-2023/assignments) repo,
+   original [`assignments`](https://github.com/dat310-2024/assignments) repo,
    e.g. new or updated lab assignments. To fetch and integrate these
    updates into your own working copy, you will need to run the following commands:
 
