@@ -74,4 +74,6 @@ To see and handin assignments you need to complete these steps:
 You can then view assignments at [here](https://github.com/dat310-2024/assignments).
 
 ### First assignment:
-To allow you to start the first assignment right away, you can see it in the `assignment-1` [folder](assignment-1/)
+To allow you to start the first assignment right away, you can see it in the `assignment-1` [folder](assignment-1/).
+
+**After delivering, assignments need to be approved by showing it to a student assistant. This must happen within 1 week after the deadline.**
