@@ -42,6 +42,11 @@
 
   - Extend the previous exercise such that songs can be removed too. Add a delete link or icon to each song; clicking the link/icon should remove the song from the list.
 
+## Exercise #3c: Advanced playlist
+
+  - Extend the previous exercise such that songs can be sorted. Try to maintain a list of songs in a global javascript variable and use this as source of truth.
+
+
 ## Exercise 4: Countdown timer
 
   - Make a countdown timer that counts back from the selected time. Check the starting files ([exercise4.html](exercise4.html) and [exercise4.js](exercise4.js)) which already provide you with a select list and code for processing the user input.
