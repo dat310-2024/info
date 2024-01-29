@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #3: Simple playlist</title>
+    <link rel="stylesheet" href="exercise3.css">
+    <script>
+        // global variable for playlist
+        let playlist = [];
+        
+        function remove(){
+            // get current song name
+            let name = this.parentNode.textContent
+            // find name in playlist
+            for (let i = 0; i< playlist.length; i++){
+                if (playlist[i] == name){
+                    // splice(i,1) removes 1 array element at index i
+                    playlist.splice(i,1);
+                    // break to only remove first occurance
+                    break;
+                }
+            }
+            // display new playlist
+            displaySongs();
+        }
+
+        function sortSongs(){
+            // sort array
+            playlist.sort();
+            // display new playlist
+            displaySongs();
+        }
+
+        // displaySong, removes all songs from the html,
+        // then it creates html for the current songs in playlist
+        function displaySongs(){
+            document.getElementById("playlist").innerHTML = "";
+            for (let i=0; i< playlist.length; i++){
+                addSong(playlist[i]);
+            }
+        }
+        
+        // add function creates a new element in playlist
+        function add(){
+            let name = document.getElementById("songTextInput").value;
+            if (name.length < 2){
+                // only create elements with name of at leat 2 letters
+                console.log("Too short");
+                return;
+            }
+            playlist.push(name);
+            displaySongs();
+        }
+
+        // addSong appends the html for one song
+        function addSong(name){
+            let newli = document.createElement("li");
+            newli.textContent = name;
+            let newimg = document.createElement("img");
+            newimg.src = "images/delete.png";
+            newli.appendChild(newimg);
+            newimg.onclick = remove;
+            let playlist = document.getElementById("playlist");
+            playlist.appendChild(newli);
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input type="button" id="addButton" value="Add Song" onclick="add();">
+    <input type="button" id="sortButton" value="Sort" onclick="sortSongs();">
+</form>
+
+<ul id="playlist">
+    <!-- <li>Example <img src="use-images/delete.png"></li> -->
+</ul>
+
+</body>
+</html>
+
