@@ -1,7 +1,7 @@
-class Field{
-    constructor(type){
+class Field {
+    constructor(type) {
         let types = ['wall', 'free', 'exit', 'pit'];
-        if (types.indexOf(type) == -1){
+        if (types.indexOf(type) == -1) {
             console.log("Created field with wrong type")
         }
         this.type = type // 'wall','free', 'exit', or 'pit'
@@ -9,140 +9,140 @@ class Field{
         this.hero = false;
         this.monster = false;
     }
-    show(){
+    show() {
         this.hidden = false;
     }
-    set(player){
-        this[player]=true;
+    set(player) {
+        this[player] = true;
         this.hidden = false;
     }
-    unset(player){
-        this[player]=false;
+    unset(player) {
+        this[player] = false;
     }
 }
 
-const board1 = 
-    ['free','free','wall','wall','wall','free',
-     'wall','free','free','free','wall','free',
-     'wall','free','wall','free','free','free',
-     'wall','free','wall','wall','wall','exit',
-     'wall','free','pit','free','wall','free'];
-const board2 = 
-     ['free','free','wall','pit','wall','free',
-      'wall','free','free','free','free','free',
-      'free','free','wall','free','wall','free',
-      'free','wall','wall','free','wall','exit',
-      'free','free','free','free','free','free'];
-const board3 = 
-      ['free','free','wall','pit','free','free',
-       'wall','free','wall','free','wall','free',
-       'free','free','free','free','free','free',
-       'free','wall','wall','free','wall','free',
-       'free','exit','free','free','wall','free'];
+const board1 =
+    ['free', 'free', 'wall', 'wall', 'wall', 'free',
+        'wall', 'free', 'free', 'free', 'wall', 'free',
+        'wall', 'free', 'wall', 'free', 'free', 'free',
+        'wall', 'free', 'wall', 'wall', 'wall', 'exit',
+        'wall', 'free', 'pit', 'free', 'wall', 'free'];
+const board2 =
+    ['free', 'free', 'wall', 'pit', 'wall', 'free',
+        'wall', 'free', 'free', 'free', 'free', 'free',
+        'free', 'free', 'wall', 'free', 'wall', 'free',
+        'free', 'wall', 'wall', 'free', 'wall', 'exit',
+        'free', 'free', 'free', 'free', 'free', 'free'];
+const board3 =
+    ['free', 'free', 'wall', 'pit', 'free', 'free',
+        'wall', 'free', 'wall', 'free', 'wall', 'free',
+        'free', 'free', 'free', 'free', 'free', 'free',
+        'free', 'wall', 'wall', 'free', 'wall', 'free',
+        'free', 'exit', 'free', 'free', 'wall', 'free'];
 
-function getRandomBoard(){
+function getRandomBoard() {
     // randomly pick 0, 1 or 2
-    let r = Math.floor(Math.random()*3)
+    let r = Math.floor(Math.random() * 3)
     // use r to pick a board
-    let boards =[board1,board2,board3]
+    let boards = [board1, board2, board3]
     return boards[r];
 }
 
-function generatefields(){
+function generatefields() {
     let fields = [];
     let layout = getRandomBoard();
-    
-    for (let i=0; i<layout.length; i++){
+
+    for (let i = 0; i < layout.length; i++) {
         fields.push(new Field(layout[i]));
     }
     return fields;
 }
 
-class Board{
-    constructor(){
-        this.heroXY = [0,0];    // x,y coordinates of hero
-        this.monsterXY = [5,0]; // x,y coordinates of monster
-        this.xmax=5;// x ranges from 0 to 5
-        this.ymax=4;// y ranges from 0 to 4
+class Board {
+    constructor() {
+        this.heroXY = [0, 0];    // x,y coordinates of hero
+        this.monsterXY = [5, 0]; // x,y coordinates of monster
+        this.xmax = 5;// x ranges from 0 to 5
+        this.ymax = 4;// y ranges from 0 to 4
         this.fields = [];
     }
-    getXY(player){
-        if (player == 'hero'){ return this.heroXY};
+    getXY(player) {
+        if (player == 'hero') { return this.heroXY };
         return this.monsterXY;
     }
-    start(){
+    start() {
         this.fields = generatefields();
-        this.setplayer(0,0,'hero');    // default start position
-        this.setplayer(5,0,'monster'); // default start position
+        this.setplayer(0, 0, 'hero');    // default start position
+        this.setplayer(5, 0, 'monster'); // default start position
     }
-    hasField(x,y){
-        if (x < 0 || x > this.xmax || y < 0 || y > this.ymax){
+    hasField(x, y) {
+        if (x < 0 || x > this.xmax || y < 0 || y > this.ymax) {
             return false;
         }
         return true;
     }
-    getField(x,y){
-        if (!this.hasField(x,y)){
+    getField(x, y) {
+        if (!this.hasField(x, y)) {
             throw "Field outside of board"
         }
-        return this.fields[y*6+x];
+        return this.fields[y * 6 + x];
     }
-    setplayer(x,y,player){
+    setplayer(x, y, player) {
         console.log(`move ${player} to (${x},${y})`);
-        let next = this.getField(x,y)
+        let next = this.getField(x, y)
         next.set(player);
-        this[player+'XY']=[x,y];
-        
-        if (this.heroXY[0] == this.monsterXY[0] && 
-            this.heroXY[1] == this.monsterXY[1]){
+        this[player + 'XY'] = [x, y];
+
+        if (this.heroXY[0] == this.monsterXY[0] &&
+            this.heroXY[1] == this.monsterXY[1]) {
             game.eat();
         }
 
-        if (next.type == "pit"){
+        if (next.type == "pit") {
             game.pit(player)
         }
-        if (next.type == "exit"){
+        if (next.type == "exit") {
             game.exit(player)
-        } 
+        }
 
     }
-    trymove(x,y,player){
-        if (game.ended){
+    trymove(x, y, player) {
+        if (game.ended) {
             return;
         }
-        if (player != game.player() ){
+        if (player != game.player()) {
             return;
         }
-        
-        if (this.hasField(x,y)){
-            let next = this.getField(x,y);
+
+        if (this.hasField(x, y)) {
+            let next = this.getField(x, y);
             next.show();
-            if (next.type == 'wall'){
+            if (next.type == 'wall') {
                 console.log("wall");
                 game.move();
                 return;
             }
             let oldXY = this.getXY(player);
-            this.getField(oldXY[0],oldXY[1]).unset(player);
-            this.setplayer(x,y,player);
+            this.getField(oldXY[0], oldXY[1]).unset(player);
+            this.setplayer(x, y, player);
         }
         game.move();
     }
-    moveright(player){
+    moveright(player) {
         let xy = this.getXY(player);
-        this.trymove(xy[0]+1,xy[1],player);
+        this.trymove(xy[0] + 1, xy[1], player);
     }
-    moveleft(player){
+    moveleft(player) {
         let xy = this.getXY(player);
-        this.trymove(xy[0]-1,xy[1],player);
+        this.trymove(xy[0] - 1, xy[1], player);
     }
-    moveup(player){
+    moveup(player) {
         let xy = this.getXY(player);
-        this.trymove(xy[0],xy[1]-1,player);
+        this.trymove(xy[0], xy[1] - 1, player);
     }
-    movedown(player){
+    movedown(player) {
         let xy = this.getXY(player);
-        this.trymove(xy[0],xy[1]+1,player);
+        this.trymove(xy[0], xy[1] + 1, player);
     }
 }
 
@@ -181,6 +181,6 @@ function keyhandle(event) {
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     document.body.addEventListener("keyup", keyhandle);
 }

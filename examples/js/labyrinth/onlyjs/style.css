@@ -7,9 +7,11 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
-main > div {
+
+main>div {
     flex-grow: 1;
 }
+
 #board {
     margin: auto;
     display: flex;
@@ -17,6 +19,7 @@ main > div {
     width: 300px;
     border: 1px solid black;
 }
+
 .field {
     width: 50px;
     height: 50px;
@@ -28,25 +31,32 @@ main > div {
 .field.hidden {
     background-color: burlywood;
 }
+
 .wall {
     background-color: grey;
 }
+
 .pit {
     background-color: black;
 }
+
 .exit {
     background-color: yellow;
 }
+
 .field img {
     display: none;
 }
+
 .field img.monster {
     height: 48px;
     display: none;
 }
+
 .field.hero img.hero {
     display: block;
 }
+
 .field.monster img.monster {
     display: block;
 }
@@ -65,13 +75,14 @@ main > div {
     background-color: lightcoral;
 }
 
-#stats > div {
+#stats>div {
     min-width: 300px;
 }
 
 #winner .hero {
     display: none;
 }
+
 #winner .monster {
     display: none;
 }

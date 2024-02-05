@@ -1,20 +1,19 @@
 class Game {
-    constructor(){
+    constructor() {
         this.heromoves = 2;
         this.monstermoves = 0;
         this.winner = "";
         this.ended = false;
-        // if heroturn is false, it is the monsters turn
-        this.players=['hero','monster'];
-        this.turn=0;
+        this.players = ['hero', 'monster'];
+        this.turn = 0;
     }
-    player(){
+    player() {
         return this.players[this.turn];
     }
-    move(){
-        if (this.turn == 0){
+    move() {
+        if (this.turn == 0) {
             //hero
-            if (this.heromoves == 2){ 
+            if (this.heromoves == 2) {
                 this.heromoves--;
             } else {
                 this.heromoves--;
@@ -24,16 +23,16 @@ class Game {
         } else {
             //monster move
             this.turn = 0;
-            this.heromoves=2;
+            this.heromoves = 2;
             this.monstermoves = 0;
         }
     }
-    eat(){
+    eat() {
         alert("The hero was eaten.");
         this.win("monster")
     }
-    pit(){
-        if (this.turn == 0){
+    pit() {
+        if (this.turn == 0) {
             alert("The hero fell into a pit.");
             this.win("monster");
         } else {
@@ -41,11 +40,11 @@ class Game {
             this.win("hero");
         }
     }
-    exit(){
+    exit() {
         alert(this.player() + " found the exit.");
         this.win(this.player());
     }
-    win(winner){
+    win(winner) {
         this.ended = true;
         this.winner = winner;
     }
