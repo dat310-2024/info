@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js"></script>
+    <script src="board.js"></script>
+    <title>Game</title>
+</head>
+
+<body>
+    <h1>The labyrinth game</h1>
+    <div id="app">
+        <main>
+            <div>
+                <div id="board">
+                    <div class="field hero">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field monster">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall hidden">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field hidden">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall hidden">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field hidden">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field exit">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field pit">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field wall">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                    <div class="field">
+                        <img class="hero" src="hero.jpg" alt="hero">
+                        <img class="monster" src="monster.png" alt="monster">
+                    </div>
+                </div>
+            </div>
+            <div id="stats">
+                <div id="herostats" class="turn">
+                    <h2>Hero</h2>
+                    <div>Moves: <span class="movescount">0</span> </div>
+                </div>
+                <div id="monsterstats" class="">
+                    <h2>Monster</h2>
+                    <div>Moves: <span class="movescount">0</span> </div>
+                </div>
+            </div>
+        </main>
+        <div id="winner">
+            <h2 class="monster">The monster won!</h2>
+            <h2 class="hero">The hero won!</h2>
+        </div>
+    </div>
+</body>
+
+</html>
