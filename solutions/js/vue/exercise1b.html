@@ -35,10 +35,10 @@
 <body>
     <div id="app">
         <div class="counter_container">
-            <div class="counter" v-bind:class="{'even': isEven}">
+            <div class="counter" v-bind:class="isEven">
                 <span id="count" class="count">{{ count }}</span>
                 <button v-on:click="increment">Add</button>
-                <span class="counter_label">{{ isEven ? "even": "odd" }}</span>
+                <span class="counter_label">{{ isEven }}</span>
             </div>
         </div>
     </div>
@@ -57,7 +57,10 @@
             },
             computed: {
                 isEven: function(){
-                    return (this.count%2 == 0);
+                    if (this.count%2 == 0){
+                        return "even"
+                    }
+                    return "odd";
                 }
             }
         }).mount("#app");
