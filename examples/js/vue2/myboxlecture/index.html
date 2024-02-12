@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Vue -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.js"></script>
+    
+    <title>Solution: Vue Exercise 1b</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 35px;
+            background-color: lightskyblue;
+            border: 1px solid blue;
+            margin: 5px;
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <div style="float: left;">
+            <div class="box"></div>
+        </div>
+        <div style="float: right;">
+            <div class="box"></div>
+            ></my-box>
+        </div> 
+        <div style="float: left;">
+            {{ clicked }}
+        </div>
+               
+    </div>
+    <template id="boxtemplate">
+    </template>
+
+
+    <script>
+        let mainC = {
+            data() { return { clicked: "" }},
+            methods: {
+                setClicked: function(value){
+                    this.clicked = value;
+                }
+            }
+
+        }
+
+        let app = Vue.createApp(mainC);
+    
+        
+        
+        app.mount("#app");
+    </script>
+</body>
+</html>
