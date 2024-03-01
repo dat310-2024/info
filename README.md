@@ -19,8 +19,8 @@ This repository is for the 2024 spring edition of the DAT310 Web programming cou
 |-----|------|----|-|
 |Tue  |8 - 12|AR-G001|Forelesning|
 |Thu  |10 - 14|AR-G001|Forelesning|
-|Fre  |8 - 12|E454|Lab|
-|Fre  |14 - 16|E454|Lab|
+|Fre  |8 - 12|E456|Lab|
+|Fre  |14 - 16|E456|Lab|
 
 ### Room change:
 On some days lecture will happen in KE E166.
