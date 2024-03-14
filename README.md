@@ -52,8 +52,8 @@ This is a tentative schedule and will be subject to changes.
 |    9 |       Thu | Flask III (database)  | [Slides](slides/9-2-Web-programming-Server-p3.pdf) [examples](examples/python/flask) [exercises](exercises/python/flask3/) [solutions](solutions/python/flask3/)                                    |
 |   10 |       Tue | No lecture | Åpen dag | 
 |   10 |       Thu | JS Async              | [Slides](slides/10-1-Web-programming-JS-async.pdf) (**2024**) [examples](examples/async/js) [exercises](exercises/async/js) [solutions](solutions/async/js)                                   |
-|   11 |       Tue | AJAX                  | [Slides](slides/11-1-Web-programming-AJAX.pdf) [examples](examples/ajax) [exercises](exercises/ajax) [solutions](solutions/ajax)                                                   |
-|   11 |       Thu | AJAX & Vue            | [Slides](slides/11-2-Web-programming-AJAX+Vue.pdf) [examples](examples/ajax) [exercises](exercises/ajax) [solutions](solutions/ajax)                                               |
+|   11 |       Tue | AJAX                  | [Slides](slides/11-1-Web-programming-AJAX.pdf) (**2024**) [examples](examples/ajax) [exercises](exercises/ajax) [solutions](solutions/ajax)                                                   |
+|   11 |       Thu | AJAX & Vue            | [Slides](slides/11-2-Web-programming-AJAX+Vue.pdf) (**2024**) [examples](examples/ajax) [exercises](exercises/ajax) [solutions](solutions/ajax)                                               |
 |   12 |       Tue | RESTfull APIs         | [Slides](slides/12-1-Web-programming-Flask-APIs.pdf) [examples](examples/ajax) [exercises](exercises/ajax) [solutions](solutions/ajax)                                                              |
 |   12 |       Thu | Flask IV (cookies)    | [Slides](slides/12-2-Web-programming-Server-p4.pdf) [examples](examples/python/flask4) [exercises](exercises/python/flask4) [solutions](solutions/python/flask4)                    |
 |   13 |       Thu | No lecture (Easter) | |
