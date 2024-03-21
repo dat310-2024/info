@@ -36,19 +36,21 @@ def addSong():
     band = song.get("band")
     if not name or not band:
         abort(400, "name or band missing")
+    # get last id
+    lastid = PLAYLIST[-1]["idx"]
     song = {
         "name": name,
-        "band": band
+        "band": band,
+        "idx": lastid+1
     }
-    if song not in PLAYLIST:
-        PLAYLIST.append(song)
+    PLAYLIST.append(song)
     return json.dumps(PLAYLIST)
 
 @app.route("/songs/<int:idx>", methods=["DELETE"])
 def removeSong(idx):
     sleep(1)
     for song in PLAYLIST:
-        if idx == song.idx:
+        if idx == song["idx"]:
             PLAYLIST.remove(song)
         
     return json.dumps(PLAYLIST)

@@ -21,6 +21,12 @@ let app = Vue.createApp({
     },
     methods: {
         addSong: async function(song) {
+            if (!song.name || !song.band){
+                this.error = "Please enter song name and band name."
+                return;
+            }
+
+
             // add song to playlist and mark as not saved
             song.saving = true;
             this.playlist.push(song);
@@ -33,7 +39,7 @@ let app = Vue.createApp({
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({namex: song.name, band: song.band}),
+                    body: JSON.stringify({name: song.name, band: song.band}),
                 });
                 let result = await response.json()
                 if (response.status == 200){
