@@ -58,8 +58,9 @@ This is a tentative schedule and will be subject to changes.
 |   12 |       Thu | RESTfull APIs         | [Slides](slides/12-1-Web-programming-Flask-APIs.pdf) (**2024**) [examples](examples/ajax) [exercises](exercises/ajax) [solutions](solutions/ajax)                                                              |
 |   13 |       Thu | No lecture (Easter) | |
 |   13 |       Tue | No lecture (Easter) | |
-|   14 |       Tue | Login                 | [Slides](slides/13-1-Web-programming-Server-Login.pdf) [examples](examples/python/flask5) [exercises](exercises/python/flask5) [solutions](solutions/python/flask5)                                                                                                                            |
-|   14 |       Thu | Accessibility         | [Slides](slides/15-1-Accessibility.pdf) [examples](examples/a11y/table.html)|
+|   14 |       Tue | No lecture (Easter) | |
+|   14 |       Thu |Login                 | [Slides](slides/13-1-Web-programming-Server-Login.pdf) [examples](examples/python/flask5) [exercises](exercises/python/flask5) [solutions](solutions/python/flask5)                                                                                                                            |
+|   15 |       Tue | Accessibility         | [Slides](slides/15-1-Accessibility.pdf) [examples](examples/a11y/table.html)|
 
 **There will be no lectures the remaining weeks. Instead, every group should attend an individual meeting with Leander.**
 
