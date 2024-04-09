@@ -60,7 +60,7 @@ This is a tentative schedule and will be subject to changes.
 |   13 |       Tue | No lecture (Easter) | |
 |   14 |       Tue | No lecture (Easter) | |
 |   14 |       Thu |Login                 | [Slides](slides/13-1-Web-programming-Server-Login.pdf) [examples](examples/python/flask5) [exercises](exercises/python/flask5) [solutions](solutions/python/flask5)                                                                                                                            |
-|   15 |       Tue | Accessibility         | [Slides](slides/15-1-Accessibility.pdf) [examples](examples/a11y/table.html)|
+|   15 |       Tue | Accessibility         | [Slides](slides/15-1-Web-programming-Ass8-Access.pdf) [examples](examples/a11y/table.html)|
 
 **There will be no lectures the remaining weeks. Instead, every group should attend an individual meeting with Leander.**
 
