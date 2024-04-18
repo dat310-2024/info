@@ -110,7 +110,7 @@ Your web server should be Flask. Data should be stored either in an SQLite datab
 You may use the Flask-login plugin, but that is not required. If you do so, note it in your README.md.
 If you want to use a Object-Relational-Mapper (ORM), you may use SQLAlchemy.
 
-You cannot use Flask-forms.
+You cannot use Flask-forms or Flask-WTF or similar.
 
 #### Frontend:
 The frontend should be either pure JS or Vue.
