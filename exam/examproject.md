@@ -124,6 +124,11 @@ You are not allowed to use a different JS Framework like React.
 You may use additional JS libraries for achieving extra functionality, e.g. showing graphs, or similar. 
 Ask on discord, and mention what is used and for what in your README.
 
+You can use Node.js and Webpack or Vite to create your Vue application. 
+However, in this case, you need to build your application and include the final js files in you Flask application such that we do not have to run Node.js to run your project.
+You still have to include your source code on github.
+Also note that I do only have limited ability to help you with these tools.
+
 #### Layout:
 You can either use plain CSS or Bootstrap.
 If you copy CSS files from the web, e.g. `reset.css` or `normalize.css`, you must specify this in the README.md. If specified, it will not count as plagiarism.
