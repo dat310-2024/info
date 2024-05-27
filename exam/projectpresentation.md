@@ -46,6 +46,7 @@ If you agreed to switch, you need to inform Leander Jehl by email more than a da
 | Date      | Time  | Group name           | Students                                                |
 | --------- | ----- | -------------------- | ------------------------------------------------------- |
 | 06.6.2024 | 10:30 | exam_108271          | Oleander Tengesdal                                      |
+| 07.6.2024 | 10:40 | solomagnus           | Magnue Ziem                                             |
 | 07.6.2024 | 11:00 | gruppe               | Rebecca Vangen, LisaCabot                               |
 | 07.6.2024 | 11:10 | aleksbasel           | Aleksander Bø, Basel Abu Sablih                         |
 | 07.6.2024 | 11:20 | erlend_og_atle       | Atle Ranum Krey, Erlend Torkildsen Seldal               |
@@ -94,7 +95,6 @@ If you agreed to switch, you need to inform Leander Jehl by email more than a da
 | 11.6.2024 | 11:40 | exam-project         | Ayda Omar Mohamed, osman Wais                           |
 | 11.6.2024 | 11:50 | forge                | Mascuud, Abdiasis                                       |
 | 11.6.2024 | 13:00 | somgang              | Farhiyo Hassan Mohamud , Farhiyo Hassan Mohamud , xnira |
-| 11.6.2024 | 13:10 | solomagnus           | Magnus Ziem                                             |
 | 11.6.2024 | 13:20 | library_project      | Lars Olav Thorbjørnsen, Mathias Elstrøm                 |
 | 11.6.2024 | 13:30 | simon_og_hanad       | Hanad Samahle, Simon André Stava                        |
 | 11.6.2024 | 13:40 | stiansgruppe         | Stian Salte                                             |
