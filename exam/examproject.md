@@ -24,6 +24,7 @@
     - [Additional features](#additional-features)
   - [Grading](#grading)
       - [Score table](#score-table)
+- [Tips:](#tips)
 - [Project presentation](#project-presentation-1)
   - [Help and plagiarism](#help-and-plagiarism)
 
@@ -232,6 +233,15 @@ The points given to different criteria may change!
 | Authentication	| 5 |
 | Access control	| 5 |
 | Extra feature	| 15 |
+
+# Tips:
+
+I did get some questions regarding the criteria above, and since I thought the answers might be useful for some others as well.
+- Server side validation: Check that form input and other data received from the browser are in correct format.
+- Errors: This includes handling network errors. Also use http error codes when you get an error on the backend.
+- Authentication: Check that the user is logged inn, server side.
+- Access control: Check that the user only manipulates data he is allowed to manipulate, server side.
+
 
 # Project presentation
 You will have to give a 5 minute presentation about your project.
