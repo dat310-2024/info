@@ -235,12 +235,12 @@ The points given to different criteria may change!
 | Extra feature	| 15 |
 
 # Tips:
-
 I did get some questions regarding the criteria above, and since I thought the answers might be useful for some others as well.
 - Server side validation: Check that form input and other data received from the browser are in correct format.
-- Errors: This includes handling network errors. Also use http error codes when you get an error on the backend.
+- Errors: This includes handling network errors. Also use http error codes when you get an error on the backend. Check the REST slides.
 - Authentication: Check that the user is logged inn, server side.
 - Access control: Check that the user only manipulates data he is allowed to manipulate, server side.
+- If you do search in Javascript, [localstorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp) is probably the easiest form to store something, but cookies or database storage is just fine as well.
 
 
 # Project presentation
