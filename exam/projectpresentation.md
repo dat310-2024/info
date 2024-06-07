@@ -79,6 +79,7 @@ If you agreed to switch, you need to inform Leander Jehl by email more than a da
 | 10.6.2024 | 15:10 | Exam                 | No members                                              |
 | 10.6.2024 | 15:20 | amiinelmi            | Amiin Elmi                                              |
 | 10.6.2024 | 15:30 | mm_and_olechristian  | Mohammed Mahamud Mahamed, Ole Christian Bråtveit        |
+| 10.6.2024 | 15:40 | web310-examblad      | Adrian Dietrichs, Bjarte Landråk                        |
 | 11.6.2024 | 9:00  | exam-project-group   | Rahulfattah Zulkarnain, Jasmin Kawinthida Espedal       |
 | 11.6.2024 | 9:10  | leidulfogthorbjorn   | Thorbjørn Puttkamer, Leidulf Vigre                      |
 | 11.6.2024 | 9:20  | Eksamens_prosjekt    | No members                                              |
@@ -100,7 +101,6 @@ If you agreed to switch, you need to inform Leander Jehl by email more than a da
 | 11.6.2024 | 13:40 | stiansgruppe         | Stian Salte                                             |
 | 11.6.2024 | 13:50 | martin               | Martin Beitdokken                                       |
 | 11.6.2024 | 14:30 | booking-exam         | Emil Hals, Thomas Vatnamo Hustad                        |
-| 11.6.2024 | 14:40 | web310-examblad      | Adrian Dietrichs, Bjarte Landråk                        |
 | 11.6.2024 | 14:50 | eksamensprosjektnm   | Magnus Eidsvåg, Noah Bjerke                             |
 | 11.6.2024 | 15:00 | project_homan_nikzad | Homan Nikzad                                            |
 | 11.6.2024 | 15:10 | webprogrammering     | Ruhan Reza, Jehad Ahmed Hamidi, jahad ahmed hamidi      |
